@@ -14,7 +14,7 @@ class Train {
   Cage* final; // последний вагон
   Train::Cage* create(bool light);
  public:
-  Train();
+  Train(): first(nullptr), last(nullptr), countOp(0) {};
   void addCage(bool light); // добавить вагон с начальным состоянием лампочки
   int getLength();          // вычислить длину поезда
   int getOpCount();         // вернуть число переходов (из вагона в вагон)
